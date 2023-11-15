@@ -6,6 +6,16 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function reverse(a) {
+        var rev = "";
+        while (a != 0) {
+          rev += a % 10;
+          a = parseInt(a / 10);
+        }
+        return +rev;
+      }
+      console.log(reverse(12345));
+    </script>
   </body>
 </html>

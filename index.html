@@ -6,6 +6,20 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function isPrime(a) {
+        var num = 2;
+        var prime = 1;
+        while (num < a ** 0.5) {
+          if (a % num === 0) {
+            prime = 0;
+            break;
+          }
+          num++;
+        }
+        return prime;
+      }
+      console.log(isPrime(36));
+    </script>
   </body>
 </html>

@@ -6,6 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function fac(a) {
+        var factorial = 1;
+        if (a >= 0 && a == parseInt(a)) {
+          while (a > 0) {
+            factorial *= a;
+            a--;
+          }
+        } else factorial = `Enter a valid input`;
+
+        return factorial;
+      }
+    </script>
   </body>
 </html>

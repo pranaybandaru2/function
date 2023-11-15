@@ -8,8 +8,17 @@
   <body>
     <script>
       function greatest(a, b, c) {
-        (a>b&&a>c)?return a:(b>c)?return b:return c;
+        // a > b && a > c ? return a : b > c ? return b : return c;
+        if (a > b && a > c) {
+          return a;
+        } else if (b > c) {
+          return b;
+        } else {
+          return c;
+        }
       }
+
+      console.log(greatest(9, 10, 16));
     </script>
   </body>
 </html>

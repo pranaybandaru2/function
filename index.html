@@ -6,6 +6,30 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function primecheck(a) {
+        var num = 2;
+        var prime = true;
+        while (num < a ** 0.5 && prime) {
+          if (a % num == 0) prime = 0;
+          num++;
+        }
+        if (prime) {
+          return a;
+        } else return null;
+      }
+      function primeintherange(a, b) {
+        if (a > b) {
+          var temp = a;
+          a = b;
+          b = temp;
+        }
+        for (var i = a; i < b; i++) {
+          var k = primecheck(i);
+          console.log(k);
+        }
+      }
+      primeintherange(10, 20);
+    </script>
   </body>
 </html>

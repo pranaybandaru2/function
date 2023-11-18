@@ -6,6 +6,17 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function power(a, b) {
+        if (b == 0) {
+          return 1;
+        } else {
+          return a * power(a, b - 1);
+        }
+      }
+      var num = +prompt(`Enter a number`);
+      var pow = +prompt(`Enter a power`);
+      console.log(power(num, pow));
+    </script>
   </body>
 </html>

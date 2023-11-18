@@ -6,6 +6,54 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function isPrime(a) {
+        var prime = 1;
+        var num = 2;
+        while (num <= a ** 0.5 && prime) {
+          if (a % num == 0) prime = 0;
+          num++;
+        }
+        if (prime) {
+          return `${a} is a prime`;
+        } else {
+          return `${a} is not a prime`;
+        }
+      }
+      function isArmstrong(a) {
+        var sum = 0;
+        var temp = a;
+        var length = a.toString().length;
+        for (i = 1; i <= length; i++) {
+          sum += (temp % 10) ** length;
+          temp = parseInt(temp / 10);
+        }
+        if (sum == a) {
+          return `${a} is a armstrong number`;
+        } else {
+          return `${a} is not a armstrong number`;
+        }
+      }
+      function isPerfectNumber(a) {
+        var sum = 0;
+        for (var i = 1; i < a; i++) {
+          if (a % i == 0) {
+            sum += i;
+          }
+        }
+        if (sum == a) {
+          return `${a} is a perfect number`;
+        } else {
+          return `${a} is not a perfect number`;
+        }
+      }
+      function chkpap(a) {
+        console.log(isArmstrong(a));
+        console.log(isPrime(a));
+        console.log(isPerfectNumber(a));
+      }
+      var num1 = +prompt(`Enter a number`);
+      chkpap(num1);
+    </script>
   </body>
 </html>

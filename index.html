@@ -6,6 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function printnumber(n) {
+        console.log(n);
+        if (n == 1) {
+          return;
+        }
+        printnumber(n - 1);
+      }
+      printnumber(100);
+    </script>
   </body>
 </html>
